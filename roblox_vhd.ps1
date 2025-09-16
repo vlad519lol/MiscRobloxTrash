@@ -27,7 +27,7 @@ function Create-VHD {
 
     # Перенос содержимого если есть
     if (Test-Path $tempPath) {
-        Copy-Item -Path $tempPath\* -Destination $newTarget -Recurse -Force
+        Copy-Item -Path "$tempPath\*" -Destination $newTarget -Recurse -Force
         Remove-Item $tempPath -Recurse -Force
     }
 
